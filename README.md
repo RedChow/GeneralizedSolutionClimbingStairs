@@ -22,5 +22,9 @@ We now make our first observation: we are looking for permutations of {1, 1, 1, 
   From our example with <i>n</i>=3, we are looking for the number of permutations of {1, 2}. We then have:
 </p>
 <p>
-  <img src="images/first_eqn.gif" />
+  <img src="images/first_eqn.gif" />,
+  <br />
+  which is equal to 2. The other solution is {1, 1, 1}, which the number of permutations of {1, 1, 1} can still be found by using the multinomial coefficient:
+  <img src="images/second_eqn.gif" />.
+  
 </p>
