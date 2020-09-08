@@ -16,6 +16,6 @@ climbing stairs using any length of steps less than <i>n</i>.
 We first make the observation that we are permuting a multiset of <i>n</i> elements where the number of 1s and 2s are the multiplicities of the objects 1 and 2.
 For example, if <i>n</i>=3, and the number of 1s and 2s are 1 and 1, then we want the number of permutations of arranging 1 and 2.
 Since we have two distinct objects, 1 and 2, and each object has multiplicity 1, we have:
-  <img src="https://raw.githubusercontent.com/RedChow/GeneralizedSolutionClimbingStairs/images/first_eqn.gif" />
+  <img src="https://github.com/RedChow/GeneralizedSolutionClimbingStairs/images/first_eqn.gif" />
   </p>
 ![Alt_Text](images/first_eqn.gif?raw=true "2 choose 1,1")
