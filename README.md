@@ -23,8 +23,7 @@ We now make our first observation: we are looking for permutations of {1, 1, 1, 
 </p>
 <p>
   <img src="images/first_eqn.gif" />,
-  <br />
-  which is equal to 2. The other solution is {1, 1, 1}, which the number of permutations of {1, 1, 1} can still be found by using the multinomial coefficient:
+  which is equal to 2. The other solution is {1, 1, 1}, which the number of permutations of {1, 1, 1} can still be found by using the multinomial coefficient. Since we have 3 total objects and the 1 is repeated three times, we have:
   <img src="images/second_eqn.gif" />.
   
 </p>
