@@ -25,5 +25,13 @@ We now make our first observation: we are looking for permutations of {1, 1, 1, 
   <img src="images/first_eqn.gif" />,
   which is equal to 2. The other solution is {1, 1, 1}, which the number of permutations of {1, 1, 1} can still be found by using the multinomial coefficient. Since we have 3 total objects and the 1 is repeated three times, we have:
   <img src="images/second_eqn.gif" />.
-  
 </p>
+<p>
+  For other <i>n</i>, we note that
+</p>
+```python
+class Solution:
+  def climbStairs(self, n: int) -> int:
+    def multinomial(n, r1, r2):
+      return int(math.factorial(n)/(math.factorial(r1)*math.factorial(r2)))
+```
