@@ -18,5 +18,4 @@ For example, if <i>n</i>=3, and the number of 1s and 2s are 1 and 1, then we wan
 Since we have two distinct objects, 1 and 2, and each object has multiplicity 1, we have:
   <img src="https://raw.githubusercontent.com/RedChow/GeneralizedSolutionClimbingStairs/images/first_eqn.gif" />
   </p>
-![Alt_Text](/images/first_eqn.gif?raw=true "2 choose 1,1")
-
+![Alt_Text](images/first_eqn.gif?raw=true "2 choose 1,1")
