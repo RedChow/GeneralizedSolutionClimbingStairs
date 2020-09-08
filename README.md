@@ -13,8 +13,14 @@ climbing stairs using any length of steps less than <i>n</i>.
 </p>
 <h2>Solution for Original Problem</h2>
 <p>
-We first make the observation that we are permuting a multiset of <i>n</i> elements where the number of 1s and 2s are the multiplicities of the objects 1 and 2.
-For example, if <i>n</i>=3, and the number of 1s and 2s are 1 and 1, then we want the number of permutations of arranging 1 and 2.
-Since we have two distinct objects, 1 and 2, and each object has multiplicity 1, we have:
+  Let's first take an example with <i>n</i>=3. Our first solution is 1, 1, 1. We then also have 1, 2 and 2, 1 as <i>different</i> distinct solutions. Since 1, 2 and 2, 1 are considered different solutions, these are permutations of the set {1, 2}.
+</p>
+<p>
+We now make our first observation: we are looking for permutations of {1, 1, 1, ..., 2, 2, 2, ...} where the sum of set is equal to <i>n</i>. Permuting a set with  repeated elements calls for the use of multinomial coefficients, c.f. <a href="https://en.wikipedia.org/wiki/Multinomial_theorem">Multinomial Theorem</a> and <a href="https://en.wikipedia.org/wiki/Multinomial_theorem#Number_of_unique_permutations_of_words">Number of Unique Permutations of Words</a>. 
+</p>  
+<p>
+  From our example with <i>n</i>=3, we are looking for the number of permutations of {1, 2}. We then have:
+</p>
+<p>
   <img src="images/first_eqn.gif" />
-  </p>
+</p>
