@@ -17,5 +17,5 @@ We first make the observation that we are permuting a multiset of <i>n</i> eleme
 For example, if <i>n</i>=3, and the number of 1s and 2s are 1 and 1, then we want the number of permutations of arranging 1 and 2.
 Since we have two distinct objects, 1 and 2, and each object has multiplicity 1, we have:
 <img src='https://github.com/RedChow/GeneralizedSolutionClimbingStairs/tree/master/images/first_eqn.gif'>
-![2 choose 1, 1](https://github.com/RedChow/GeneralizedSolutionClimbingStairs/tree/master/images/first_eqn.gif)
+![2 choose 1, 1](master/images/first_eqn.gif)
 </p>
