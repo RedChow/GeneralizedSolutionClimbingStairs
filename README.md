@@ -27,17 +27,32 @@ We now make our first observation: we are looking for permutations of {1, 1, 1, 
   <img src="images/second_eqn.gif" />.
 </p>
 <p>
-  For other <i>n</i>, we note that
+  For other <i>n</i>, we note that <i>n</i> 1s a solution. This solutions can be counted as having <i>n</i> 1s and 0 2s. To get the next group of solutions, we decrement the number of 1s by 2 and increment the number of 2s by 1. This will ensure that our sum is still equal to <i>n</i>, and we have our numbers for couting the number of permutations of 1 and 2. Thus we make a variable to hold the number of 1s and another to keep track of the number of 2s. Our algorithm stops when we can no longer add any more number of 2s to the solution. 
 </p>
-```python
-class Solution:
-  def climbStairs(self, n: int) -> int:
-    def multinomial(n, r1, r2):
-      return int(math.factorial(n)/(math.factorial(r1)*math.factorial(r2)))
-```
+
+<pre>
 <code>
 class Solution:
   def climbStairs(self, n: int) -> int:
     def multinomial(n, r1, 42):
       return int(math.factorial(n)/(math.factorial(r1)*math.factorial(r2)))
+    #number of solutions
+    s = 0
+    #number of 2s
+    x = 0
+    #number of 1s
+    y = n
+    while y >= 0:
+      s = s + multinomial(n, y, x)
+      #we are taking two 1s from the set, but adding one 2, thus n decreases by 1 each iteration
+      n = n - 1
+      y = y - 2
+      x = x + 1
+    return s
 </code>
+</pre>
+
+<h2>Solution for General Problem</h2>
+<p>
+  
+</p>
