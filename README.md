@@ -35,3 +35,10 @@ class Solution:
     def multinomial(n, r1, r2):
       return int(math.factorial(n)/(math.factorial(r1)*math.factorial(r2)))
 ```
+```javascript
+function fancyAlert(arg) {
+  if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```
