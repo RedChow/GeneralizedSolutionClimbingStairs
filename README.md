@@ -62,10 +62,13 @@ class Solution:
 </p>
 <img src="images/fourth_eqn.gif" />.
 <p>
-  Thus we need an algorithm for computing the partitions of an integer and another for computing the multinomial coefficient. Calculating integer partitions can be done with recursion. We start with <i>n</i> and "break" into smaller pieces on each successive call. While we compute each partition, we keep track of the number of times each symbol is used in a dictionary. Keeping track of the symbol count will be necessary for evaluating the multinomial coefficient for each partition. Thus the program in a nutshell:
+  Thus we need an algorithm for computing the partitions of an integer and another for computing the multinomial coefficient. Calculating integer partitions can be done with recursion. We start with <i>n</i> and "break" into smaller pieces on each successive call. While we compute each partition, we keep track of the number of times each symbol is used in a dictionary. Keeping track of the symbol count will be necessary for evaluating the multinomial coefficient for each partition. Thus the program in a nutshell is two steps:
 </p>
 <ol>
-  <li>Calculate partitions of <i>n</i> while keeping track of the symbol count</li>
-  <li>Any partition that uses disallowed steps are discarded</li>
+  <li>Calculate partitions of <i>n</i></li>
+  <ul>
+    <li>keep track of the symbol count for each partition</li>
+    <li>discard any partition that uses disallowed steps</li>
+  </ul>
   <li>Calculate multionomail coefficient for each parition found in step 1</li>
 </ol>
