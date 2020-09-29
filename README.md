@@ -23,7 +23,7 @@ We now make our first observation: we are looking for permutations of {1, 1, 1, 
 </p>
 <p>
   <img src="images/first_eqn.gif" />,
-  which is equal to 2. The other solution is {1, 1, 1}, which the number of permutations of {1, 1, 1} can still be found by using the multinomial coefficient. Since we have 3 total objects and the 1 is repeated three times, we have:
+  which is equal to 2. Note that the formulat arises from having 2 symbols, 1 is repeated 1 time and the 2 is repeated 1 time. The other solution is {1, 1, 1}, which the number of permutations of {1, 1, 1} can still be found by using the multinomial coefficient. Since we have 3 total objects and the 1 is repeated three times, we have:
   <img src="images/second_eqn.gif" />.
 </p>
 <p>
@@ -54,5 +54,18 @@ class Solution:
 
 <h2>Solution for General Problem</h2>
 <p>
-  
+  Excluding any physical limitation of the number of steps you can take at once, the collection of the possible steps to get to the top is a partition of <i>n</i>. For example, if <i>n</i>=6, the collection of steps would be given by <i>S</i> = {{6}, {5, 1}, {4, 2}, {4, 1, 1}, {3, 3}, {3, 2, 1}, {3, 1, 1}, {2, 2, 2}, {2, 2, 1, 1}, {2, 1, 1, 1, 1}, {1, 1, 1, 1, 1, 1}}. Then for each set in <i>S</i>, we can reorder the steps to get more solutions. For example, {3, 2, 1} would yield {3, 2, 1}, {3, 1, 2}, {2, 3, 1}, {2, 1, 3}, {1, 2, 3}, {1, 3, 2} while {2, 1, 1, 1, 1} would {2, 1, 1, 1, 1}, {1, 2, 1, 1, 1}, {1, 1, 2, 1, 1}, {1, 1, 1, 2, 1}, and {1, 1, 1, 1, 2}. Finding all the solutions from a set in <i>S</i>  is essentially what we were finding in the first part: finding the number of permutations with repeated elements. From our previous example, the number of permutations of {3, 2, 1} is 
 </p>
+<img src="images/third_eqn.gif" />,
+<p>
+ and similarly for {2, 1, 1, 1, 1} we have 
+</p>
+<img src="images/fourth_eqn.gif" />.
+<p>
+  Thus we need an algorithm for computing the partitions of an integer and another for computing the multinomial coefficient. Calculating integer partitions can be done with recursion. We start with <i>n</i> and "break" into smaller pieces on each successive call. While we compute each partition, we keep track of the number of times each symbol is used in a dictionary. Keeping track of the symbol count will be necessary for evaluating the multinomial coefficient for each partition. Thus the program in a nutshell:
+</p>
+<ol>
+  <li>Calculate partitions of <i>n</i> while keeping track of the symbol count</li>
+  <li>Any partition that uses disallowed steps are discarded</li>
+  <li>Calculate multionomail coefficient for each parition found in step 1</li>
+</ol>
